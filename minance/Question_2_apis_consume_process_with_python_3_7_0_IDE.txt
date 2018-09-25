@@ -1,0 +1,46 @@
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> import requests
+>>> 
+#########################  POST ##############################################
+>>> res = requests.post('http://127.0.0.1:8000/employee_creation/', json = {'first_name':'Durga', 'last_name':'Nani', 'device_id':'1234'}, auth=('',''), headers = {'Authorization' : 'Token '})
+>>> res
+<Response [200]>
+>>> 
+>>> res.text
+'1'
+>>> res = requests.post('http://127.0.0.1:8000/employee_creation/', json = {'first_name':'Nani', 'last_name':'Chinnu', 'device_id':'4567'}, auth=('',''), headers = {'Authorization' : 'Token '})
+>>> res
+<Response [200]>
+>>> res.text
+'"Employee successfully created - 2"'
+>>> 
+res = requests.post('http://127.0.0.1:8000/employee_creation/', json = {'first_name':'OTA', 'last_name':'Travel', 'device_id':'3231'}, auth=('',''), headers = {'Authorization' : 'Token '})
+>>> res
+<Response [200]>
+>>> res.text
+'"Employee successfully created - 3"'
+
+#########################  GET ##############################################
+>>> res = requests.get('http://127.0.0.1:8000/employee_details/', json = {'first_name':'Nani', 'last_name':'Chinnu', 'device_id':'4567'}, auth=('',''), headers = {'Authorization' : 'Token '})
+>>> res
+<Response [200]>
+>>> res.text
+'[{"id":1,"first_name":"Durga","last_name":"Nani","device_id":1234},{"id":2,"first_name":"Nani","last_name":"Chinnu","device_id":4567}]'
+
+#########################  PUT ##############################################
+>>> res = requests.put('http://127.0.0.1:8000/employee_updation/1/', json = {'first_name':'Nani123', 'last_name':'Chinnu123', 'device_id':'4567'}, auth=('',''), headers = {'Authorization' : 'Token '})
+>>> 
+>>> res
+<Response [200]>
+>>> res.text
+'"Employee Updated Successfully..."'
+>>> 
+
+#########################  DELETE ##############################################
+>>> res = requests.delete('http://127.0.0.1:8000/employee_deletion/3/', auth=('',''), headers = {'Authorization' : 'Token '})
+>>> res
+<Response [200]>
+>>> res.text
+'"Employee deleted successfully..."'
+>>> 

@@ -1,0 +1,86 @@
+C:\Users\admin\Documents\minance>pip install xlrd
+Collecting xlrd
+  Downloading https://files.pythonhosted.org/packages/07/e6/e95c4eec6221bfd8528b
+cc4ea252a850bffcc4be88ebc367e23a1a84b0bb/xlrd-1.1.0-py2.py3-none-any.whl (108kB)
+
+    100% |████████████████████████████████| 112kB 480kB/s
+Installing collected packages: xlrd
+Successfully installed xlrd-1.1.0
+
+
+C:\Users\admin\Documents\minance>python manage.py shell
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Inte
+l)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+
+>>> import xlrd
+>>> import pandas as pd
+>>>
+>>> res = pd.read_excel("excel_file123.xlsx")
+>>> res
+          SYMBOL SERIES      ...       TOTALTRADES          ISIN
+0      20MICRONS     EQ      ...               307  INE144J01027
+1     3IINFOTECH     EQ      ...              4372  INE748C01020
+2        3MINDIA     EQ      ...               288  INE470A01017
+3        8KMILES     EQ      ...              5830  INE650K01013
+4       A2ZINFRA     EQ      ...              2790  INE619I01012
+5     AARTIDRUGS     EQ      ...               567  INE767A01016
+6       AARTIIND     EQ      ...               852  INE769A01020
+7      AARVEEDEN     EQ      ...                96  INE273D01019
+8           ABAN     EQ      ...             16874  INE421A01028
+9            ABB     EQ      ...              3742  INE117A01022
+10    ABBOTINDIA     EQ      ...               406  INE358A01014
+11         ABCIL     EQ      ...               761  INE605B01016
+12       ABGSHIP     EQ      ...              2274  INE067H01016
+13    ABIRLANUVO     EQ      ...             16200  INE069A01017
+14           ACC     EQ      ...             16780  INE012A01025
+15       ACCELYA     EQ      ...               257  INE793A01012
+16           ACE     EQ      ...              2554  INE731H01025
+17     ACROPETAL     EQ      ...               215  INE055L01013
+18      ADANIENT     EQ      ...             15971  INE423A01024
+19    ADANIPORTS     EQ      ...             41766  INE742F01042
+20    ADANIPOWER     EQ      ...             19036  INE814H01011
+21    ADANITRANS     EQ      ...             10472  INE931S01010
+22      ADFFOODS     EQ      ...              1023  INE982B01019
+23       ADHUNIK     EQ      ...              1355  INE400H01019
+24           ADI     EQ      ...                67  INE959A01019
+25        ADLABS     EQ      ...              1262  INE172N01012
+26      ADORWELD     EQ      ...               324  INE045A01017
+27          ADSL     EQ      ...              5089  INE102I01027
+28    ADVANIHOTR     EQ      ...                34  INE199C01026
+29       ADVANTA     EQ      ...               997  INE517H01028
+...          ...    ...      ...               ...           ...
+1591      WHEELS     EQ      ...               376  INE715A01015
+1592   WHIRLPOOL     EQ      ...              3040  INE716A01013
+1593  WILLAMAGOR     EQ      ...               329  INE210A01017
+1594  WINDMACHIN     EQ      ...               810  INE052A01021
+1595     WINSOME     EQ      ...                11  INE784B01035
+1596       WIPRO     EQ      ...             34287  INE075A01022
+1597  WOCKPHARMA     EQ      ...             35240  INE049B01025
+1598    WONDERLA     EQ      ...              2579  INE066O01014
+1599         WSI     EQ      ...                18  INE100D01014
+1600  WSTCSTPAPR     EQ      ...              2264  INE976A01021
+1601   XCHANGING     EQ      ...               676  INE692G01013
+1602    XLENERGY     EQ      ...                 8  INE183H01011
+1603   XPROINDIA     EQ      ...               441  INE445C01015
+1604     YESBANK     EQ      ...             29128  INE528G01019
+1605  ZANDUREALT     EQ      ...              1553  INE719A01017
+1606        ZEEL     EQ      ...             34336  INE256A01028
+1607        ZEEL     P1      ...                 5  INE256A04014
+1608    ZEELEARN     EQ      ...               973  INE565L01011
+1609    ZEEMEDIA     EQ      ...              2575  INE966H01019
+1610   ZENITHBIR     EQ      ...                17  INE318D01020
+1611  ZENITHCOMP     EQ      ...                 3  INE598B01013
+1612  ZENSARTECH     EQ      ...              2775  INE520A01019
+1613      ZENTEC     EQ      ...              6270  INE251B01027
+1614       ZICOM     EQ      ...              1106  INE871B01014
+1615  ZODIACLOTH     EQ      ...                44  INE206B01013
+1616   ZODJRDMKJ     EQ      ...                15  INE077B01018
+1617       ZUARI     EQ      ...              4230  INE840M01016
+1618   ZUARIGLOB     EQ      ...              2176  INE217A01012
+1619   ZYDUSWELL     EQ      ...               393  INE768C01010
+1620       ZYLOG     EQ      ...                48  INE225I01026
+
+[1621 rows x 13 columns]
+>>>

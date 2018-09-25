@@ -1,0 +1,90 @@
+>>> import requests
+>>> zipurl = 'https://nseindia.com/content/historical/EQUITIES/2016/JAN/cm06JAN2
+016bhav.csv.zip'
+>>>
+>>>
+>>> resp = requests.get(zipurl)
+>>>
+>>> zname = "1234.csv.zip"
+>>> zfile = open(zname, 'wb')
+>>>
+>>>
+>>> zfile.write(resp.content)
+60265
+>>>
+>>>
+>>> zfile.close()
+>>>
+>>>
+>>>
+>>> import pandas as pd
+>>>
+>>>
+>>> res = pd.read_csv("1234.csv.zip")
+>>> res
+          SYMBOL SERIES     ...               ISIN  Unnamed: 13
+0      20MICRONS     EQ     ...       INE144J01027          NaN
+1     3IINFOTECH     EQ     ...       INE748C01020          NaN
+2        3MINDIA     EQ     ...       INE470A01017          NaN
+3        8KMILES     EQ     ...       INE650K01013          NaN
+4       A2ZINFRA     EQ     ...       INE619I01012          NaN
+5     AARTIDRUGS     EQ     ...       INE767A01016          NaN
+6       AARTIIND     EQ     ...       INE769A01020          NaN
+7      AARVEEDEN     EQ     ...       INE273D01019          NaN
+8           ABAN     EQ     ...       INE421A01028          NaN
+9            ABB     EQ     ...       INE117A01022          NaN
+10    ABBOTINDIA     EQ     ...       INE358A01014          NaN
+11         ABCIL     EQ     ...       INE605B01016          NaN
+12       ABGSHIP     EQ     ...       INE067H01016          NaN
+13    ABIRLANUVO     EQ     ...       INE069A01017          NaN
+14           ACC     EQ     ...       INE012A01025          NaN
+15       ACCELYA     EQ     ...       INE793A01012          NaN
+16           ACE     EQ     ...       INE731H01025          NaN
+17     ACROPETAL     EQ     ...       INE055L01013          NaN
+18      ADANIENT     EQ     ...       INE423A01024          NaN
+19    ADANIPORTS     EQ     ...       INE742F01042          NaN
+20    ADANIPOWER     EQ     ...       INE814H01011          NaN
+21    ADANITRANS     EQ     ...       INE931S01010          NaN
+22      ADFFOODS     EQ     ...       INE982B01019          NaN
+23       ADHUNIK     EQ     ...       INE400H01019          NaN
+24           ADI     EQ     ...       INE959A01019          NaN
+25        ADLABS     EQ     ...       INE172N01012          NaN
+26      ADORWELD     EQ     ...       INE045A01017          NaN
+27          ADSL     EQ     ...       INE102I01027          NaN
+28    ADVANIHOTR     EQ     ...       INE199C01026          NaN
+29       ADVANTA     EQ     ...       INE517H01028          NaN
+...          ...    ...     ...                ...          ...
+1591      WHEELS     EQ     ...       INE715A01015          NaN
+1592   WHIRLPOOL     EQ     ...       INE716A01013          NaN
+1593  WILLAMAGOR     EQ     ...       INE210A01017          NaN
+1594  WINDMACHIN     EQ     ...       INE052A01021          NaN
+1595     WINSOME     EQ     ...       INE784B01035          NaN
+1596       WIPRO     EQ     ...       INE075A01022          NaN
+1597  WOCKPHARMA     EQ     ...       INE049B01025          NaN
+1598    WONDERLA     EQ     ...       INE066O01014          NaN
+1599         WSI     EQ     ...       INE100D01014          NaN
+1600  WSTCSTPAPR     EQ     ...       INE976A01021          NaN
+1601   XCHANGING     EQ     ...       INE692G01013          NaN
+1602    XLENERGY     EQ     ...       INE183H01011          NaN
+1603   XPROINDIA     EQ     ...       INE445C01015          NaN
+1604     YESBANK     EQ     ...       INE528G01019          NaN
+1605  ZANDUREALT     EQ     ...       INE719A01017          NaN
+1606        ZEEL     EQ     ...       INE256A01028          NaN
+1607        ZEEL     P1     ...       INE256A04014          NaN
+1608    ZEELEARN     EQ     ...       INE565L01011          NaN
+1609    ZEEMEDIA     EQ     ...       INE966H01019          NaN
+1610   ZENITHBIR     EQ     ...       INE318D01020          NaN
+1611  ZENITHCOMP     EQ     ...       INE598B01013          NaN
+1612  ZENSARTECH     EQ     ...       INE520A01019          NaN
+1613      ZENTEC     EQ     ...       INE251B01027          NaN
+1614       ZICOM     EQ     ...       INE871B01014          NaN
+1615  ZODIACLOTH     EQ     ...       INE206B01013          NaN
+1616   ZODJRDMKJ     EQ     ...       INE077B01018          NaN
+1617       ZUARI     EQ     ...       INE840M01016          NaN
+1618   ZUARIGLOB     EQ     ...       INE217A01012          NaN
+1619   ZYDUSWELL     EQ     ...       INE768C01010          NaN
+1620       ZYLOG     EQ     ...       INE225I01026          NaN
+
+[1621 rows x 14 columns]
+>>>
+>>>
